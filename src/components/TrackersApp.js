@@ -2,9 +2,10 @@ import React, {useState} from "react";
 import db from "../data";
 
 const TrackersApp = () => {
-  const [allTrackers, setAllTrackers] = useState(db);
-  const [filterText, setFilterText] = useState("");
-  const [selectedTracker, setSelectedTracker] = useState({});
+  const [allTrackers] = useState(db);
+  //   const [allTrackers, setAllTrackers] = useState(db);
+  //   const [filterText, setFilterText] = useState("");
+  //   const [selectedTracker, setSelectedTracker] = useState({});
   return (
     <div>
       <h3>Il y a {allTrackers.length} trackers.</h3>
