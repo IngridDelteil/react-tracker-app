@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {FilterTrackers} from "./FilterTrackers";
+import {TrackersTable} from "./TrackersTable";
 import db from "../data";
 
 const TrackersApp = () => {
@@ -18,17 +19,7 @@ const TrackersApp = () => {
   return (
     <>
       <FilterTrackers onTextChange={handleTextChange} />
-      <div>
-        <h3>
-          Il y a {allTrackers.length}{" "}
-          {allTrackers.length > 1 ? "trackers" : "tracker"}
-          {filterText !== "" ? " (contenant : " + filterText + " )." : "."}
-        </h3>
-
-        {allTrackers.map((tracker, id) => (
-          <p key={id}>{tracker.name}</p>
-        ))}
-      </div>
+      <TrackersTable trackers={allTrackers} />
     </>
   );
 };
