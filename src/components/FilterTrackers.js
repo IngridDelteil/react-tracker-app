@@ -1,6 +1,6 @@
 import React from "react";
 
-const FilterTrackers = ({onTextChange}) => {
+const FilterTrackers = ({onTextChange, initialFilter}) => {
   const handleChange = (event) => {
     onTextChange(event.target.value);
   };
@@ -11,6 +11,7 @@ const FilterTrackers = ({onTextChange}) => {
         <input
           type='text'
           placeholder='Libellé du Tracker'
+          value={initialFilter}
           onChange={handleChange}
         />
       </div>
