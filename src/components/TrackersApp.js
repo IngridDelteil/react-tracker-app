@@ -18,7 +18,10 @@ const TrackersApp = () => {
 
   return (
     <>
-      <FilterTrackers onTextChange={handleTextChange} />
+      <FilterTrackers
+        onTextChange={handleTextChange}
+        initialFilter={filterText}
+      />
       <TrackersTable trackers={allTrackers} />
     </>
   );
